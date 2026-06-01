@@ -3,161 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PteroVirtual - Panel & OTP Store</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NexusStore - Panel Pterodactyl & Rumah OTP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
-    <nav class="navbar">
-        <div class="logo"><i class="fa-solid fa-server"></i> Ptero<span>Virtual</span></div>
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#pterodactyl">Panel Ptero</a></li>
-            <li><a href="#otp">Rumah OTP</a></li>
-            <li><a href="#testi">Testimoni</a></li>
-        </ul>
-        <button class="btn-primary" onclick="openModal('Hubungi Admin via WhatsApp untuk bantuan.')">CS Online</button>
+    <nav class="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-black tracking-wider text-indigo-500"><i class="fa-solid fa-bolt mr-2"></i>NEXUSSTORE</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#pterodactyl" class="hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Panel Pterodactyl</a>
+                        <a href="#otp" class="hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Rumah OTP</a>
+                        <a href="#testimoni" class="hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">Testimoni</a>
+                    </div>
+                </div>
+                <span class="bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full font-medium border border-green-500/20">
+                    <span class="w-2 h-2 inline-block bg-green-400 rounded-full mr-1 animate-pulse"></span> Otomatis Aktif
+                </span>
+            </div>
+        </div>
     </nav>
 
-    <header id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Layanan Instan <span>Panel Pterodactyl</span> & <span>Nomor Virtual OTP</span></h1>
-            <p>Proses otomatis, hemat waktu, dan aktif 24 jam non-stop dengan pembayaran QRIS/Bank otomatis.</p>
-            <div class="hero-buttons">
-                <a href="#pterodactyl" class="btn-primary">Beli Panel</a>
-                <a href="#otp" class="btn-secondary">Beli OTP</a>
+    <header class="relative bg-gray-800 overflow-hidden py-20 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-4">
+                Layanan <span class="text-indigo-500">Panel & OTP</span> Tercepat
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                Penyedia Panel Pterodactyl High Performance dan Nomor Virtual (Rumah OTP) instant. Didukung pembayaran otomatis via FR3NEWERA.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#pterodactyl" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-lg shadow-indigo-600/30">Beli Panel</a>
+                <a href="#otp" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition">Beli No OTP</a>
             </div>
         </div>
     </header>
 
-    <section class="features">
-        <div class="feature-box">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Proses Otomatis</h3>
-            <p>Setelah pembayaran sukses, produk langsung dikirim detik itu juga.</p>
-        </div>
-        <div class="feature-box">
-            <i class="fa-solid fa-credit-card"></i>
-            <h3>Automated Payment</h3>
-            <p>Mendukung QRIS (Dana, OVO, LinkAja) & Transfer Bank dengan verifikasi otomatis.</p>
-        </div>
-        <div class="feature-box">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3>Garansi & Aman</h3>
-            <p>Nomor virtual fresh dan server Pterodactyl dengan uptime 99.9%.</p>
-        </div>
-    </section>
-
-    <section id="pterodactyl" class="pricing-section">
-        <h2 class="section-title">Katalog Panel Pterodactyl</h2>
-        <p class="section-subtitle">Server performa tinggi untuk kebutuhan Bot, Game, atau Hosting Anda.</p>
-        
-        <div class="grid-container">
-            <div class="card">
-                <div class="badge">Best Seller</div>
-                <h3>Ptero Hemat</h3>
-                <div class="price">Rp 5.000<span>/bulan</span></div>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-check"></i> RAM 1 GB</li>
-                    <li><i class="fa-solid fa-check"></i> CPU 100%</li>
-                    <li><i class="fa-solid fa-check"></i> Disk 5 GB NVMe</li>
-                    <li><i class="fa-solid fa-check"></i> Lokasi Indo/SG</li>
-                </ul>
-                <button class="btn-buy" onclick="checkout('Panel Ptero Hemat', 5000)">Beli Sekarang</button>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 -mt-8 relative z-20">
+        <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-gray-700 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="p-4">
+                <i class="fa-solid fa-wallet text-3xl text-indigo-500 mb-3"></i>
+                <h3 class="font-bold text-lg">Gerbang Pembayaran Otomatis</h3>
+                <p class="text-sm text-gray-400 mt-1">Diproses instan 24/7 menggunakan sistem otomatis fr3newera.com</p>
             </div>
-
-            <div class="card heavy">
-                <h3>Ptero Pro</h3>
-                <div class="price">Rp 15.000<span>/bulan</span></div>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-check"></i> RAM 4 GB</li>
-                    <li><i class="fa-solid fa-check"></i> CPU 200%</li>
-                    <li><i class="fa-solid fa-check"></i> Disk 20 GB NVMe</li>
-                    <li><i class="fa-solid fa-check"></i> Lokasi Indo/SG</li>
-                </ul>
-                <button class="btn-primary" onclick="checkout('Panel Ptero Pro', 15000)">Beli Sekarang</button>
+            <div class="p-4 border-y md:border-y-0 md:border-x border-gray-700">
+                <i class="fa-solid fa-server text-3xl text-indigo-500 mb-3"></i>
+                <h3 class="font-bold text-lg">Pterodactyl Ready</h3>
+                <p class="text-sm text-gray-400 mt-1">Server anti-lag dengan spesifikasi terbaik untuk bot/game Anda.</p>
+            </div>
+            <div class="p-4">
+                <i class="fa-solid fa-sim-card text-3xl text-indigo-500 mb-3"></i>
+                <h3 class="font-bold text-lg">Rumah OTP Aman</h3>
+                <p class="text-sm text-gray-400 mt-1">Nomor virtual segar untuk verifikasi berbagai macam aplikasi.</p>
             </div>
         </div>
     </section>
 
-    <section id="otp" class="pricing-section bg-light">
-        <h2 class="section-title">Rumah OTP (Nomor Virtual)</h2>
-        <p class="section-subtitle">Terima kode OTP untuk berbagai aplikasi secara instan dan privat.</p>
-
-        <div class="grid-container">
-            <div class="card">
-                <div class="icon-app"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i></div>
-                <h3>OTP WhatsApp</h3>
-                <div class="price">Rp 3.500<span>/sms</span></div>
-                <p class="card-desc">Nomor Indonesia/Luar Negeri fresh untuk verifikasi WA.</p>
-                <button class="btn-buy" onclick="checkout('OTP WhatsApp', 3500)">Order Nomor</button>
-            </div>
-
-            <div class="card">
-                <div class="icon-app"><i class="fa-brands fa-telegram" style="color: #0088cc;"></i></div>
-                <h3>OTP Telegram</h3>
-                <div class="price">Rp 2.000<span>/sms</span></div>
-                <p class="card-desc">Nomor virtual khusus untuk bypass verifikasi Telegram.</p>
-                <button class="btn-buy" onclick="checkout('OTP Telegram', 2000)">Order Nomor</button>
-            </div>
-        </div>
-    </section>
-
-    <div id="paymentModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2>Invoice Pembayaran</h2>
-            <hr>
-            <div class="invoice-details">
-                <p><strong>Item:</strong> <span id="invoiceItem">-</span></p>
-                <p><strong>Total Bayar:</strong> <span id="invoicePrice" class="text-success">-</span></p>
-                <p><strong>Metode:</strong> QRIS Otomatis (All Payment)</p>
-            </div>
-            
-            <div class="qris-area">
-                <div class="qris-logo">QRIS</div>
-                <i class="fa-solid fa-qrcode qrcode-placeholder"></i>
-                <p class="timer">Silahkan scan QRIS di atas. <br>Sistem sedang mengecek pembayaran otomatis...</p>
-            </div>
-
-            <div class="loading-bar">
-                <div class="progress"></div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 PteroVirtual Store. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function checkout(itemName, price) {
-            document.getElementById('invoiceItem').innerText = itemName;
-            // Format Rupiah
-            document.getElementById('invoicePrice').innerText = 'Rp ' + price.toLocaleString('id-ID');
-            
-            // Tampilkan Modal
-            document.getElementById('paymentModal').style.display = 'flex';
-
-            // Simulasi Pembayaran Berhasil setelah 5 detik
-            setTimeout(() => {
-                alert('🎉 Pembayaran Berhasil Terverifikasi Otomatis!\n\nProduk Anda sedang diproses dan detailnya dikirim via sistem.');
-                closeModal();
-            }, 6000);
-        }
-
-        function closeModal() {
-            document.getElementById('paymentModal').style.display = 'none';
-        }
-
-        // Tutup modal jika klik di luar area modal
-        window.onclick = function(event) {
-            let modal = document.getElementById('paymentModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
-</body>
-</html>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py
